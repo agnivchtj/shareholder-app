@@ -1,0 +1,23 @@
+<!-- dialog-box.component.html -->
+<h1 mat-dialog-title>
+    <strong>{{action}} shareholder</strong>
+</h1>
+
+<div mat-dialog-content>
+  <mat-form-field>
+    <input placeholder="{{action}} Name" matInput [(ngModel)]="local_data.name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="{{action}} Amount" matInput [(ngModel)]="local_data.num_shares">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="{{action}} Type" matInput [(ngModel)]="local_data.share_type">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
